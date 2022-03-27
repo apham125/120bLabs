@@ -1,0 +1,7 @@
+Breakpoint 1 at 0x39e: file source/main.c, line 48.
+Note: automatically using hardware breakpoints for read-only addresses.
+======================================================
+Running all tests..."
+
+"light1"..."light2"..."light3"..."light1 again"..."light2 again"..."light3 again"...======================================================
+Remote doesn't know how to detach
