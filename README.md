@@ -37,34 +37,51 @@ Demo Link: https://drive.google.com/file/d/112z_kpHRB4TlyktrBpit8jYBKQcNDBfA/vie
 
 ## Lab 7
 1)	Buttons are connected to PA0 and PA1. Output PORTC and PORTD drive the LCD display, initially displaying 0. Pressing PA0 increments the display (stopping at 9). Pressing PA1 decrements the display (stopping at 0). If both buttons are depressed (even if not initially simultaneously), the display resets to 0. If a button is held, then the display continues to increment (or decrement) at a rate of once per second. Use a synchronous state machine captured in C.
+Demo link: https://drive.google.com/file/d/1wYwmIbLnLOdCB0Ny4qFV-j6k3mHBybP-/view?usp=sharing
 2)	**(Challenge)** Extend the earlier light game to maintain a score on the LCD display. The initial score is 5. Each time the user presses the button at the right time (the middle LED), the score increments. Each time the user fails, the score decrements. When reaching 9, show victory somehow.
+Demo Link: https://drive.google.com/file/d/1rdmbedBiGtgz9BVgqy5EscJ80N-5GgP2/view?usp=sharing
 
 ## Lab 8
 1)	Make sure your breadboard is wired according to the prelab. The potentiometer is used to adjust the voltage supplied to the microcontroller for ADC . Design a system that reads the 10-bit ADC result from the ADC register, and displays the result on a bank of 10 LEDs.
+Demo Link: https://drive.google.com/file/d/1HuUFSYpFxnpdBRjElViU1tX4LQWr7QuC/view?usp=sharing
 2)	A photoresistor is a resistor whose resistance varies based on how much light the photoresistor detects. An additional resistor needs to be connected in parallel with the photoresistor. Without the additional resistor, results from ADC will be too small to observe. A 330 ohm resistor is chosen because it is common in the lab kits. Connect the photoresistor to the microcontroller according to the diagram below.
+Demo Link: https://drive.google.com/file/d/1BvF0q8aEXFfSnDZ6k3M6E2DD2joOg1Bv/view?usp=sharing
 3)	Design a system where an LED is illuminated only if enough light is detected from the photo resistor.
+Demo Link: https://drive.google.com/file/d/1p6y5A6BvWQxejzhAH61zXi4ub2dEfbrM/view?usp=sharing
 4)	**(Challenge)** Design a system, using a bank of eight LEDs, where the number of LEDs illuminated is a representation of how much light is detected. For example, when more light is detected, more LEDs are illuminated.
+Demo Link: https://drive.google.com/file/d/1oUmtwcaWdU8vR2KWeldoKlSn2C3e1lvD/view?usp=sharing
 
 ## Lab 9
 1)	Using the ATmega1284’s PWM functionality, design a system that uses three buttons to select one of three tones to be generated on the speaker. When a button is pressed, the tone mapped to it is generated on the speaker.
+Demo Link: https://drive.google.com/file/d/1WZ5ejKYVmYK4Een9GB89HxwSNXjINzev/view?usp=sharing
 2)	Using the ATmega1284’s PWM functionality, design a system where the notes: C4, D, E, F, G, A, B, and C5,  from the table at the top of the lab, can be generated on the speaker by scaling up or down the eight note scale. Three buttons are used to control the system. One button toggles sound on/off. The other two buttons scale up, or down, the eight note scale.
+Demo Link: https://drive.google.com/file/d/1riA3YqdR_74dfOEdlP-YnYm5jDFvNqjH/view?usp=sharing
 3)	**(Challenge)** Using the ATmega1284’s built in PWM functionality, design a system where a short, five-second melody, is played when a button is pressed. NOTE: The melody must be somewhat complex (scaling from C to B is NOT complex).
+Demo Link: https://drive.google.com/file/d/1MAG50um1HSneZOF0H57n-9auFNMF_Eoh/view?usp=sharing
 
 ## Lab 10
 1)	Connect LEDs to PB0, PB1, PB2, and PB3. 
 In one state machine (ThreeLEDsSM), output to a shared variable (threeLEDs) the following behavior: set only bit 0 to 1, then only bit 1, then only bit 2 in sequence for 1 second each. 
 In a second state machine (BlinkingLEDSM), output to a shared variable (blinkingLED) the following behavior: set bit 3 to 1 for 1 second, then 0 for 1 second. 
 In a third state machine (CombineLEDsSM), combine both shared variables and output to the PORTB.
+Demo Link: https://drive.google.com/file/d/11Zt74Yo6k4Kjfd_XvTPuFJKD2F6wTSf5/view?usp=sharing
 2)	Modify the above example so the threeLEDs light for 300 ms, while blinkingLED’s LED still blinks 1 second on and 1 second off.
+Demo Link: https://drive.google.com/file/d/1ns7TzakRk3Wa9-JjiIapb4SDHLtc1u_Y/view?usp=sharing
 3)	To the previous exercise's implementation, connect your speaker's red wire to PB4 and black wire to ground. Add a third task that toggles PB4 on for 2 ms and off for 2 ms as long as a switch on PA2 is in the on position. Don’t use the PWM for this task.
+Demo Link: https://drive.google.com/file/d/1sLTnj9oiZ_fNBNoBtzJn_176G-PuMCZG/view?usp=sharing
 4)	**(Challenge)** Extend the previous exercise to allow a user to adjust the sound frequency up or down using buttons connected to PA0 (up) and PA1 (down). Using our 1 ms timer abstraction, the fastest you'll be able to pulse is 1 ms on and 1 ms off, meaning 500 Hz. Again: Don’t use the PWM for this task.
+Demo Link: https://drive.google.com/file/d/1oAX82fWqNgHr1gX8g_EcrfvxBNnk3pE_/view?usp=sharing
 
 ## Lab 11
 1)	Modify the keypad code to be in an SM task. Then, modify the keypad SM to utilize the simple task scheduler format. All code from here on out should use the task scheduler.
+Demo Link: https://drive.google.com/file/d/1SrjmBx-KhD3xgdrk66SyG4hZMrvILZxp/view?usp=sharing
 2)	Use the LCD code, along with a button and/or time delay to display the message "CS120B is Legend... wait for it DARY!" The string will not fit on the display all at once, so you will need to come up with some way to paginate or scroll the text.
 Note: If your LCD is exceptionally dim, adjust the resistance provided by the potentiometer connected to Pin #3.
+Demo Link: https://drive.google.com/file/d/1Av2zY7IeFLWYo3e5z9QJdHPCEsi51NGC/view?usp=sharing
 3)	Combine the functionality of the keypad and LCD so when keypad is pressed and released, the character of the button pressed is displayed on the LCD, and stays displayed until a different button press occurs.
+Demo Link: https://drive.google.com/file/d/1so6FCTMf2Yk9UdQ7-sXHmPDiufJahOTJ/view?usp=sharing
 4)	**(Challenge)** Notice that you can visually see the LCD refresh each character (display a lengthy string then update to a different lengthy string). Design a system where a single character is updated in the displayed string rather than the entire string itself. Use the functions provided in “io.c”.
+Demo Link: https://drive.google.com/file/d/1sRB5acPlwi0IEt1ugCS5yx2MRYb19otL/view?usp=sharing
 5)	**(Challenge)** Using both rows of the LCD display, design a game where a player controlled character avoids oncoming obstacles. Three buttons are used to operate the game. Criteria:
 Use the cursor as the player controlled character.
 	- Choose a character like ‘#’, ‘\*’, etc. to represent the obstacles.
@@ -74,3 +91,4 @@ Use the cursor as the player controlled character.
 	- Minimum requirement is to have one obstacle on the top row and one obstacle on the bottom row. You may add more if you are feeling up to the challenge.
 	- Choose a reasonable movement speed for the obstacles (100ms or more).
 	- If an obstacle collides with the player, the game is paused, and a “game over” message is displayed. The game is restarted when the pause button is pressed.
+Demo Link: https://drive.google.com/file/d/1MWTTJU-IlCJsIvcFbaDwMHmBCStOkPsB/view?usp=sharing
